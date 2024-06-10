@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/picnic">
+    <title>Identificador</title>
+</head>
+<body>
+    <div class="center"><h1>Identificador de números</h1></div>
+    <div class="center">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" id="image" placeholder="Selecione a imagem"><br><br>
+            <input type="submit" hx-target="#result"></button>
+        </form>
+    </div><br>
+    <div id="result">Valor predito: {{result}}</div>
+</body>
+</html>
