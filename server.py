@@ -25,7 +25,7 @@ def upload():
     img[img > 128] = 0
     img[copy <= 128] = 255
     img = img/img.max()
-    prediction = model.predict(img.reshape(len(img), 28, 28, 1))
+    prediction = model.predict(img.reshape(1, 28, 28, 1))
     return render_template("index.html", result=np.argmax(prediction))
 
 if __name__ == '__main__':
